@@ -3,25 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
 public class MenuManager : MonoBehaviour
 {
-    private TextMeshProUGUI userName;
-    private DataBetweenScenes userData;
-
-    private void Start()
-    {
-        userName = GameObject.Find("UserNameText").GetComponent<TextMeshProUGUI>();
-    }
+    public InputField Text;
     public void StartGame()
     {
-        Debug.Log("User Name is " + userName.text);
+        DataBetweenScenes.Instance.userName = Text.text;
         SceneManager.LoadScene(1);
-        DataBetweenScenes.Instance.userName = userName.text;
-        Debug.Log("User Name is " + userName.text);
     }
 
     public void ExitGame()

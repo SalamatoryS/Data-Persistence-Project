@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DataBetweenScenes : MonoBehaviour
 {
@@ -17,5 +18,5 @@ public class DataBetweenScenes : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
+    }  
 }
