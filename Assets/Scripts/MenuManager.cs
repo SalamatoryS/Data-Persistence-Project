@@ -25,4 +25,9 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void DeleteData()
+    {
+        DataBetweenScenes.Instance.DeleteResult();
+    }
 }
